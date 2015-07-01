@@ -1,12 +1,18 @@
 {
   "name": "array-back",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Guarantees an array back",
   "repository": "https://github.com/75lb/array-back.git",
   "license": "MIT",
   "main": "./lib/array-back.js",
-  "keywords": [ "to", "convert", "return", "array", "arrayify" ],
+  "keywords": [
+    "to",
+    "convert",
+    "return",
+    "array",
+    "arrayify"
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
