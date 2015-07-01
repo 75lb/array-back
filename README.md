@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/75lb/array-back.svg?branch=master)](https://travis-ci.org/75lb/array-back)
 [![Dependency Status](https://david-dm.org/75lb/array-back.svg)](https://david-dm.org/75lb/array-back)
 
-#array-back
+# array-back
 Guarantees an array back. 
 
 ```js
