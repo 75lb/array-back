@@ -5,6 +5,10 @@
 
 <a name="module_array-back"></a>
 ## array-back
+**Example**  
+```js
+var arrayify = require("array-back");
+```
 <a name="exp_module_array-back--arrayify"></a>
 ### arrayify(input) ⇒ <code>Array</code> ⏏
 Takes any input and guarantees an array back.
@@ -41,4 +45,4 @@ Takes any input and guarantees an array back.
 
 * * *
 
-&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
