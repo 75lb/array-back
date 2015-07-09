@@ -17,12 +17,14 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/*.js",
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/*.js  > README.md; echo"
   },
   "dependencies": {
     "typical": "^2.2.0"
   },
   "devDependencies": {
+    "jsdoc-to-markdown": "^1.1.1",
     "tape": "^4.0.0"
   }
 }

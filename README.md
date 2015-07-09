@@ -3,32 +3,38 @@
 [![Build Status](https://travis-ci.org/75lb/array-back.svg?branch=master)](https://travis-ci.org/75lb/array-back)
 [![Dependency Status](https://david-dm.org/75lb/array-back.svg)](https://david-dm.org/75lb/array-back)
 
-# array-back
-Guarantees an array back. 
+<a name="arrayify"></a>
+## arrayify(input) ⇒ <code>Array</code>
+Takes any input and guarantees an array back.
 
+- converts array-like objects (e.g. `arguments`) to a real array
+- converts `undefined` to an empty array
+- converts any another other, singular value (including `null`) into an array containing that value
+- ignores input which is already an array
+
+**Kind**: global function  
+**Category**: chainable  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| input | <code>\*</code> | the input value to convert to an array |
+
+**Example**  
 ```js
-> arrayify = require("array-back")
-
-> arrayify(0)
-[ 0 ]
-
-> arrayify("hi")
-[ 'hi' ]
-
-> arrayify(null)
-[ null ]
-
-> arrayify(undefined)
+> a.arrayify(undefined)
 []
 
-> arrayify({ one: 1 })
-[ { one: 1 } ]
+> a.arrayify(null)
+[ null ]
 
-> arrayify([ "already", "an", "array" ])
-[ 'already', 'an', 'array' ]
+> a.arrayify(0)
+[ 0 ]
 
-> function f(){ return arrayify(arguments); }
-> f(1, 2, 3)
+> a.arrayify([ 1, 2 ])
+[ 1, 2 ]
+
+> function f(){ return a.arrayify(arguments); }
+> f(1,2,3)
 [ 1, 2, 3 ]
 ```
 
