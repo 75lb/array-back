@@ -3,8 +3,10 @@
 [![Build Status](https://travis-ci.org/75lb/array-back.svg?branch=master)](https://travis-ci.org/75lb/array-back)
 [![Dependency Status](https://david-dm.org/75lb/array-back.svg)](https://david-dm.org/75lb/array-back)
 
-<a name="arrayify"></a>
-## arrayify(input) ⇒ <code>Array</code>
+<a name="module_array-back"></a>
+## array-back
+<a name="exp_module_array-back--arrayify"></a>
+### arrayify(input) ⇒ <code>Array</code> ⏏
 Takes any input and guarantees an array back.
 
 - converts array-like objects (e.g. `arguments`) to a real array
@@ -12,8 +14,7 @@ Takes any input and guarantees an array back.
 - converts any another other, singular value (including `null`) into an array containing that value
 - ignores input which is already an array
 
-**Kind**: global function  
-**Category**: chainable  
+**Kind**: Exported function  
 
 | Param | Type | Description |
 | --- | --- | --- |
