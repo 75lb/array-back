@@ -1,15 +1,18 @@
 [![view on npm](http://img.shields.io/npm/v/array-back.svg)](https://www.npmjs.org/package/array-back)
-[![npm module downloads per month](http://img.shields.io/npm/dm/array-back.svg)](https://www.npmjs.org/package/array-back)
+[![npm module downloads](http://img.shields.io/npm/dt/array-back.svg)](https://www.npmjs.org/package/array-back)
 [![Build Status](https://travis-ci.org/75lb/array-back.svg?branch=master)](https://travis-ci.org/75lb/array-back)
 [![Dependency Status](https://david-dm.org/75lb/array-back.svg)](https://david-dm.org/75lb/array-back)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 <a name="module_array-back"></a>
+
 ## array-back
 **Example**  
 ```js
 var arrayify = require("array-back");
 ```
 <a name="exp_module_array-back--arrayify"></a>
+
 ### arrayify(input) ⇒ <code>Array</code> ⏏
 Takes any input and guarantees an array back.
 
@@ -45,4 +48,4 @@ Takes any input and guarantees an array back.
 
 * * *
 
-&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
+&copy; 2015-16 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
