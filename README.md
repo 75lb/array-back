@@ -9,7 +9,7 @@
 ## array-back
 **Example**  
 ```js
-var arrayify = require("array-back");
+var arrayify = require("array-back")
 ```
 <a name="exp_module_array-back--arrayify"></a>
 
