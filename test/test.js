@@ -1,17 +1,18 @@
 'use strict'
-var test = require('tape')
+var TestRunner = require('test-runner')
 var arrayify = require('../')
+var a = require('core-assert')
 
-test('arrayify()', function (t) {
-  t.deepEqual(arrayify(undefined), [])
-  t.deepEqual(arrayify(null), [ null ])
-  t.deepEqual(arrayify(0), [ 0 ])
-  t.deepEqual(arrayify([ 1, 2 ]), [ 1, 2 ])
+var runner = new TestRunner()
+
+runner.test('arrayify()', function () {
+  a.deepStrictEqual(arrayify(undefined), [])
+  a.deepStrictEqual(arrayify(null), [ null ])
+  a.deepStrictEqual(arrayify(0), [ 0 ])
+  a.deepStrictEqual(arrayify([ 1, 2 ]), [ 1, 2 ])
 
   function func () {
-    t.deepEqual(arrayify(arguments), [ 1, 2, 3 ])
+    a.deepStrictEqual(arrayify(arguments), [ 1, 2, 3 ])
   }
   func(1, 2, 3)
-
-  t.end()
 })
