@@ -1,9 +1,15 @@
 'use strict'
-var TestRunner = require('test-runner')
-var arrayify = require('../')
-var a = require('core-assert')
+const TestRunner = require('test-runner')
+const arrayify = require('./')
+const a = require('assert')
 
-var runner = new TestRunner()
+const runner = new TestRunner()
+
+runner.test('if already array, do nothing', function () {
+  const arr = [ 1,2,3 ]
+  const result = arrayify(arr)
+  a.strictEqual(arr, result)
+})
 
 runner.test('arrayify()', function () {
   a.deepStrictEqual(arrayify(undefined), [])

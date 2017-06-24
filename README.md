@@ -1,6 +1,7 @@
-[![view on npm](http://img.shields.io/npm/v/array-back.svg)](https://www.npmjs.org/package/array-back)
-[![npm module downloads](http://img.shields.io/npm/dt/array-back.svg)](https://www.npmjs.org/package/array-back)
+[![view on npm](https://img.shields.io/npm/v/array-back.svg)](https://www.npmjs.org/package/array-back)
+[![npm module downloads](https://img.shields.io/npm/dt/array-back.svg)](https://www.npmjs.org/package/array-back)
 [![Build Status](https://travis-ci.org/75lb/array-back.svg?branch=master)](https://travis-ci.org/75lb/array-back)
+[![Coverage Status](https://coveralls.io/repos/github/75lb/array-back/badge.svg?branch=master)](https://coveralls.io/github/75lb/array-back?branch=master)
 [![Dependency Status](https://david-dm.org/75lb/array-back.svg)](https://david-dm.org/75lb/array-back)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
@@ -9,7 +10,7 @@
 ## array-back
 **Example**  
 ```js
-var arrayify = require("array-back")
+const arrayify = require('array-back')
 ```
 <a name="exp_module_array-back--arrayify"></a>
 
@@ -48,4 +49,4 @@ Takes any input and guarantees an array back.
 
 * * *
 
-&copy; 2015-16 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
+&copy; 2015-17 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).

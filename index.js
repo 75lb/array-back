@@ -1,10 +1,7 @@
-'use strict'
-var t = require('typical')
-
 /**
  * @module array-back
  * @example
- * var arrayify = require("array-back")
+ * const arrayify = require('array-back')
  */
 module.exports = arrayify
 
@@ -37,11 +34,16 @@ module.exports = arrayify
  * [ 1, 2, 3 ]
  */
 function arrayify (input) {
-  if (input === undefined) {
-    return []
-  } else if (t.isArrayLike(input)) {
-    return Array.prototype.slice.call(input)
+  const t = require('typical')
+  if (Array.isArray(input)) {
+    return input
   } else {
-    return Array.isArray(input) ? input : [ input ]
+    if (input === undefined) {
+      return []
+    } else if (t.isArrayLike(input)) {
+      return Array.prototype.slice.call(input)
+    } else {
+      return [ input ]
+    }
   }
 }
