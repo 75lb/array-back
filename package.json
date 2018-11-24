@@ -16,6 +16,10 @@
   "engines": {
     "node": ">=6"
   },
+  "files": [
+    "index.mjs",
+    "dist/index.js"
+  ],
   "scripts": {
     "test": "node --experimental-modules test.mjs && npm run test:js",
     "test:js": "npm run dist:test && node dist/test.js",
