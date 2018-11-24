@@ -12,19 +12,19 @@
 ```js
 > const arrayify = require('array-back')
 
-> a.arrayify(undefined)
+> arrayify(undefined)
 []
 
-> a.arrayify(null)
+> arrayify(null)
 [ null ]
 
-> a.arrayify(0)
+> arrayify(0)
 [ 0 ]
 
-> a.arrayify([ 1, 2 ])
+> arrayify([ 1, 2 ])
 [ 1, 2 ]
 
-> function f(){ return a.arrayify(arguments); }
+> function f(){ return arrayify(arguments); }
 > f(1,2,3)
 [ 1, 2, 3 ]
 ```
