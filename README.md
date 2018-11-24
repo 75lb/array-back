@@ -11,6 +11,7 @@
 **Example**  
 ```js
 > const arrayify = require('array-back')
+
 > a.arrayify(undefined)
 []
 
