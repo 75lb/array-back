@@ -1,6 +1,6 @@
-const TestRunner = require('test-runner')
-const arrayify = require('./')
-const a = require('assert')
+import TestRunner from 'test-runner'
+import arrayify from './index.mjs'
+import a from 'assert'
 
 const runner = new TestRunner()
 

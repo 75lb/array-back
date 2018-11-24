@@ -1,9 +1,23 @@
+'use strict';
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var TestRunner = _interopDefault(require('test-runner'));
+var a = _interopDefault(require('assert'));
+
 /**
  * @module array-back
  * @example
  * const arrayify = require('array-back')
  */
-module.exports = arrayify
+
+function isObject (input) {
+  return typeof input === 'object' && input !== null
+}
+
+function isArrayLike (input) {
+  return isObject(input) && typeof input.length === 'number'
+}
 
 /**
  * Takes any input and guarantees an array back.
@@ -34,16 +48,35 @@ module.exports = arrayify
  * [ 1, 2, 3 ]
  */
 function arrayify (input) {
-  const t = require('typical')
   if (Array.isArray(input)) {
     return input
   } else {
     if (input === undefined) {
       return []
-    } else if (t.isArrayLike(input)) {
+    } else if (isArrayLike(input)) {
       return Array.prototype.slice.call(input)
     } else {
       return [ input ]
     }
   }
 }
+
+const runner = new TestRunner();
+
+runner.test('if already array, do nothing', function () {
+  const arr = [ 1,2,3 ];
+  const result = arrayify(arr);
+  a.strictEqual(arr, result);
+});
+
+runner.test('arrayify()', function () {
+  a.deepStrictEqual(arrayify(undefined), []);
+  a.deepStrictEqual(arrayify(null), [ null ]);
+  a.deepStrictEqual(arrayify(0), [ 0 ]);
+  a.deepStrictEqual(arrayify([ 1, 2 ]), [ 1, 2 ]);
+
+  function func () {
+    a.deepStrictEqual(arrayify(arguments), [ 1, 2, 3 ]);
+  }
+  func(1, 2, 3);
+});

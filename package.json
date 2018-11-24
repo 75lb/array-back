@@ -5,6 +5,7 @@
   "description": "Guarantees an array back",
   "repository": "https://github.com/75lb/array-back.git",
   "license": "MIT",
+  "main": "dist/index.js",
   "keywords": [
     "to",
     "convert",
@@ -16,16 +17,17 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "test-runner test.js",
+    "test": "node --experimental-modules test.mjs && npm run dist:test && node dist/test.js",
     "docs": "jsdoc2md -t README.hbs index.js  > README.md; echo",
-    "cover": "nyc test-runner test.js && nyc report --reporter=text-lcov | coveralls"
+    "cover": "nyc test-runner test.js && nyc report --reporter=text-lcov | coveralls",
+    "dist": "rollup -c dist/index.config.js",
+    "dist:test": "rollup -c dist/test.config.js"
   },
-  "dependencies": {
-    "typical": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "coveralls": "^3.0.2",
     "jsdoc-to-markdown": "^4.0.1",
+    "rollup": "^0.67.3",
     "test-runner": "^0.5.1"
   }
 }
