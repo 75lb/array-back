@@ -1,4 +1,3 @@
-'use strict'
 const TestRunner = require('test-runner')
 const arrayify = require('./')
 const a = require('assert')
