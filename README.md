@@ -10,7 +10,22 @@
 ## array-back
 **Example**  
 ```js
-const arrayify = require('array-back')
+> const arrayify = require('array-back')
+> a.arrayify(undefined)
+[]
+
+> a.arrayify(null)
+[ null ]
+
+> a.arrayify(0)
+[ 0 ]
+
+> a.arrayify([ 1, 2 ])
+[ 1, 2 ]
+
+> function f(){ return a.arrayify(arguments); }
+> f(1,2,3)
+[ 1, 2, 3 ]
 ```
 <a name="exp_module_array-back--arrayify"></a>
 
@@ -28,24 +43,6 @@ Takes any input and guarantees an array back.
 | --- | --- | --- |
 | input | <code>\*</code> | the input value to convert to an array |
 
-**Example**  
-```js
-> a.arrayify(undefined)
-[]
-
-> a.arrayify(null)
-[ null ]
-
-> a.arrayify(0)
-[ 0 ]
-
-> a.arrayify([ 1, 2 ])
-[ 1, 2 ]
-
-> function f(){ return a.arrayify(arguments); }
-> f(1,2,3)
-[ 1, 2, 3 ]
-```
 
 * * *
 

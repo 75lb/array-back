@@ -17,11 +17,12 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "node --experimental-modules test.mjs && npm run dist:test && node dist/test.js",
-    "docs": "jsdoc2md -t README.hbs index.js  > README.md; echo",
+    "test": "node --experimental-modules test.mjs && npm run test:js",
+    "test:js": "npm run dist:test && node dist/test.js",
+    "docs": "jsdoc2md -t README.hbs index.mjs -c build/jsdoc.conf > README.md; echo",
     "cover": "nyc test-runner test.js && nyc report --reporter=text-lcov | coveralls",
-    "dist": "rollup -c dist/index.config.js",
-    "dist:test": "rollup -c dist/test.config.js"
+    "dist": "rollup -c build/index.config.js",
+    "dist:test": "rollup -c build/test.config.js"
   },
   "dependencies": {},
   "devDependencies": {

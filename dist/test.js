@@ -8,7 +8,23 @@ var a = _interopDefault(require('assert'));
 /**
  * @module array-back
  * @example
- * const arrayify = require('array-back')
+ * > const arrayify = require('array-back')
+ * 
+ * > a.arrayify(undefined)
+ * []
+ *
+ * > a.arrayify(null)
+ * [ null ]
+ *
+ * > a.arrayify(0)
+ * [ 0 ]
+ *
+ * > a.arrayify([ 1, 2 ])
+ * [ 1, 2 ]
+ *
+ * > function f(){ return a.arrayify(arguments); }
+ * > f(1,2,3)
+ * [ 1, 2, 3 ]
  */
 
 function isObject (input) {
@@ -30,22 +46,6 @@ function isArrayLike (input) {
  * @param {*} - the input value to convert to an array
  * @returns {Array}
  * @alias module:array-back
- * @example
- * > a.arrayify(undefined)
- * []
- *
- * > a.arrayify(null)
- * [ null ]
- *
- * > a.arrayify(0)
- * [ 0 ]
- *
- * > a.arrayify([ 1, 2 ])
- * [ 1, 2 ]
- *
- * > function f(){ return a.arrayify(arguments); }
- * > f(1,2,3)
- * [ 1, 2, 3 ]
  */
 function arrayify (input) {
   if (Array.isArray(input)) {
