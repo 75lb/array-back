@@ -1,4 +1,11 @@
 /**
+ * Takes any input and guarantees an array back.
+ *
+ * - converts array-like objects (e.g. `arguments`) to a real array
+ * - converts `undefined` to an empty array
+ * - converts any another other, singular value (including `null`) into an array containing that value
+ * - ignores input which is already an array
+ *
  * @module array-back
  * @example
  * > const arrayify = require('array-back')
@@ -29,13 +36,6 @@ function isArrayLike (input) {
 }
 
 /**
- * Takes any input and guarantees an array back.
- *
- * - converts array-like objects (e.g. `arguments`) to a real array
- * - converts `undefined` to an empty array
- * - converts any another other, singular value (including `null`) into an array containing that value
- * - ignores input which is already an array
- *
  * @param {*} - the input value to convert to an array
  * @returns {Array}
  * @alias module:array-back

@@ -5,22 +5,30 @@
 }(this, (function () { 'use strict';
 
   /**
+   * Takes any input and guarantees an array back.
+   *
+   * - converts array-like objects (e.g. `arguments`) to a real array
+   * - converts `undefined` to an empty array
+   * - converts any another other, singular value (including `null`) into an array containing that value
+   * - ignores input which is already an array
+   *
    * @module array-back
    * @example
    * > const arrayify = require('array-back')
-   * > a.arrayify(undefined)
+   *
+   * > arrayify(undefined)
    * []
    *
-   * > a.arrayify(null)
+   * > arrayify(null)
    * [ null ]
    *
-   * > a.arrayify(0)
+   * > arrayify(0)
    * [ 0 ]
    *
-   * > a.arrayify([ 1, 2 ])
+   * > arrayify([ 1, 2 ])
    * [ 1, 2 ]
    *
-   * > function f(){ return a.arrayify(arguments); }
+   * > function f(){ return arrayify(arguments); }
    * > f(1,2,3)
    * [ 1, 2, 3 ]
    */
@@ -34,13 +42,6 @@
   }
 
   /**
-   * Takes any input and guarantees an array back.
-   *
-   * - converts array-like objects (e.g. `arguments`) to a real array
-   * - converts `undefined` to an empty array
-   * - converts any another other, singular value (including `null`) into an array containing that value
-   * - ignores input which is already an array
-   *
    * @param {*} - the input value to convert to an array
    * @returns {Array}
    * @alias module:array-back
