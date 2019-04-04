@@ -31,6 +31,9 @@ Takes any input and guarantees an array back.
 > arrayify([ 1, 2 ])
 [ 1, 2 ]
 
+> arrayify(new Set([ 1, 2 ]))
+[ 1, 2 ]
+
 > function f(){ return arrayify(arguments); }
 > f(1,2,3)
 [ 1, 2, 3 ]

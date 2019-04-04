@@ -32,7 +32,7 @@ function isObject (input) {
 }
 
 function isArrayLike (input) {
-  return isObject(input) && typeof input.length === 'number'
+  return isObject(input) && typeof input.length === 'number' || input instanceof Set
 }
 
 /**
@@ -43,15 +43,17 @@ function isArrayLike (input) {
 function arrayify (input) {
   if (Array.isArray(input)) {
     return input
-  } else {
-    if (input === undefined) {
-      return []
-    } else if (isArrayLike(input)) {
-      return Array.prototype.slice.call(input)
-    } else {
-      return [ input ]
-    }
   }
+
+  if (input === undefined) {
+    return []
+  }
+
+  if (isArrayLike(input)) {
+    return Array.from(input)
+  }
+
+  return [ input ]
 }
 
 export default arrayify

@@ -15,6 +15,7 @@ runner.test('arrayify()', function () {
   a.deepStrictEqual(arrayify(null), [ null ])
   a.deepStrictEqual(arrayify(0), [ 0 ])
   a.deepStrictEqual(arrayify([ 1, 2 ]), [ 1, 2 ])
+  a.deepStrictEqual(arrayify(new Set([ 1, 2 ])), [ 1, 2 ])
 
   function func () {
     a.deepStrictEqual(arrayify(arguments), [ 1, 2, 3 ])
