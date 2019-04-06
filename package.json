@@ -27,7 +27,8 @@
     "docs": "jsdoc2md -t README.hbs index.mjs -c build/jsdoc.conf > README.md; echo",
     "cover": "nyc test-runner test.js && nyc report --reporter=text-lcov | coveralls",
     "dist": "rollup -c build/index.config.js",
-    "dist:test": "rollup -c build/test.config.js"
+    "dist:test": "rollup -c build/test.config.js",
+    "lint": "standard **/*.mjs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,5 +36,11 @@
     "jsdoc-to-markdown": "^4.0.1",
     "rollup": "^1.9.0",
     "test-runner": "^0.5.1"
+  },
+  "standard": {
+    "ignore": [
+      "dist",
+      "build"
+    ]
   }
 }

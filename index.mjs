@@ -32,7 +32,7 @@ function isObject (input) {
 }
 
 function isArrayLike (input) {
-  return isObject(input) && typeof input.length === 'number' || input instanceof Set
+  return isObject(input) && typeof input.length === 'number'
 }
 
 /**
@@ -49,7 +49,7 @@ function arrayify (input) {
     return []
   }
 
-  if (isArrayLike(input)) {
+  if (isArrayLike(input) || input instanceof Set) {
     return Array.from(input)
   }
 

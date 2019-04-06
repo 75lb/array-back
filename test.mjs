@@ -5,7 +5,7 @@ import a from 'assert'
 const runner = new TestRunner()
 
 runner.test('if already array, do nothing', function () {
-  const arr = [ 1,2,3 ]
+  const arr = [ 1, 2, 3 ]
   const result = arrayify(arr)
   a.strictEqual(arr, result)
 })
@@ -22,9 +22,9 @@ runner.test('arrayify()', function () {
   }
   func(1, 2, 3)
 
-  a.deepStrictEqual(arrayify({one: 1}), [ {one: 1} ])
-  const map = new Map();
-  map.set('one', 1);
-  map.set('two', 2);
+  a.deepStrictEqual(arrayify({ one: 1 }), [ { one: 1 } ])
+  const map = new Map()
+  map.set('one', 1)
+  map.set('two', 2)
   a.deepStrictEqual(arrayify(map), [ map ])
 })
