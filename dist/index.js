@@ -1,8 +1,8 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.arrayBack = factory());
-}(this, (function () { 'use strict';
+  (global = global || self, global.arrayBack = factory());
+}(this, function () { 'use strict';
 
   /**
    * Takes any input and guarantees an array back.
@@ -38,7 +38,7 @@
   }
 
   function isArrayLike (input) {
-    return isObject(input) && typeof input.length === 'number'
+    return isObject(input) && typeof input.length === 'number' || input instanceof Set
   }
 
   /**
@@ -49,17 +49,19 @@
   function arrayify (input) {
     if (Array.isArray(input)) {
       return input
-    } else {
-      if (input === undefined) {
-        return []
-      } else if (isArrayLike(input)) {
-        return Array.prototype.slice.call(input)
-      } else {
-        return [ input ]
-      }
     }
+
+    if (input === undefined) {
+      return []
+    }
+
+    if (isArrayLike(input)) {
+      return Array.from(input)
+    }
+
+    return [ input ]
   }
 
   return arrayify;
 
-})));
+}));
