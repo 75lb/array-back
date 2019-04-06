@@ -50,15 +50,17 @@ function isArrayLike (input) {
 function arrayify (input) {
   if (Array.isArray(input)) {
     return input
-  } else {
-    if (input === undefined) {
-      return []
-    } else if (isArrayLike(input)) {
-      return Array.from(input)
-    } else {
-      return [ input ]
-    }
   }
+
+  if (input === undefined) {
+    return []
+  }
+
+  if (isArrayLike(input)) {
+    return Array.from(input)
+  }
+
+  return [ input ]
 }
 
 const runner = new TestRunner();
@@ -80,4 +82,10 @@ runner.test('arrayify()', function () {
     a.deepStrictEqual(arrayify(arguments), [ 1, 2, 3 ]);
   }
   func(1, 2, 3);
+
+  a.deepStrictEqual(arrayify({one: 1}), [ {one: 1} ]);
+  const map = new Map();
+  map.set('one', 1);
+  map.set('two', 2);
+  a.deepStrictEqual(arrayify(map), [ map ]);
 });

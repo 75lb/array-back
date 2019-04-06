@@ -10,12 +10,12 @@
 ## array-back
 Takes any input and guarantees an array back.
 
-- converts array-like objects (e.g. `arguments`) to a real array
+- converts array-like objects (e.g. `arguments`, `Set`) to a real array
 - converts `undefined` to an empty array
-- converts any another other, singular value (including `null`) into an array containing that value
+- converts any another other, singular value (including `null`, objects and other iterables) into an array containing that value
 - ignores input which is already an array
 
-**Example**  
+**Example**
 ```js
 > const arrayify = require('array-back')
 
