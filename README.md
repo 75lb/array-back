@@ -10,12 +10,12 @@
 ## array-back
 Takes any input and guarantees an array back.
 
-- converts array-like objects (e.g. `arguments`, `Set`) to a real array
-- converts `undefined` to an empty array
-- converts any another other, singular value (including `null`, objects and other iterables) into an array containing that value
-- ignores input which is already an array
+- Converts array-like objects (e.g. `arguments`, `Set`) to a real array.
+- Converts `undefined` to an empty array.
+- Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
+- Ignores input which is already an array.
 
-**Example**
+**Example**  
 ```js
 > const arrayify = require('array-back')
 
@@ -45,12 +45,12 @@ Takes any input and guarantees an array back.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| input | <code>\*</code> | the input value to convert to an array |
+| input | <code>\*</code> | The input value to convert to an array |
 
 
 ### Load anywhere
 
-This library can be loaded anywhere, natively without transpilation.
+This library is compatible with Node.js, the Web and any style of module loader. It can be loaded anywhere, natively without transpilation.
 
 Node.js:
 
@@ -78,4 +78,4 @@ Old browser (adds `window.arrayBack`):
 
 * * *
 
-&copy; 2015-18 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
+&copy; 2015-19 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).

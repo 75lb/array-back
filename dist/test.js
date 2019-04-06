@@ -8,10 +8,10 @@ var a = _interopDefault(require('assert'));
 /**
  * Takes any input and guarantees an array back.
  *
- * - converts array-like objects (e.g. `arguments`) to a real array
- * - converts `undefined` to an empty array
- * - converts any another other, singular value (including `null`) into an array containing that value
- * - ignores input which is already an array
+ * - Converts array-like objects (e.g. `arguments`, `Set`) to a real array.
+ * - Converts `undefined` to an empty array.
+ * - Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
+ * - Ignores input which is already an array.
  *
  * @module array-back
  * @example
@@ -29,6 +29,9 @@ var a = _interopDefault(require('assert'));
  * > arrayify([ 1, 2 ])
  * [ 1, 2 ]
  *
+ * > arrayify(new Set([ 1, 2 ]))
+ * [ 1, 2 ]
+ *
  * > function f(){ return arrayify(arguments); }
  * > f(1,2,3)
  * [ 1, 2, 3 ]
@@ -43,7 +46,7 @@ function isArrayLike (input) {
 }
 
 /**
- * @param {*} - the input value to convert to an array
+ * @param {*} - The input value to convert to an array
  * @returns {Array}
  * @alias module:array-back
  */
@@ -66,7 +69,7 @@ function arrayify (input) {
 const runner = new TestRunner();
 
 runner.test('if already array, do nothing', function () {
-  const arr = [ 1,2,3 ];
+  const arr = [ 1, 2, 3 ];
   const result = arrayify(arr);
   a.strictEqual(arr, result);
 });
@@ -83,7 +86,7 @@ runner.test('arrayify()', function () {
   }
   func(1, 2, 3);
 
-  a.deepStrictEqual(arrayify({one: 1}), [ {one: 1} ]);
+  a.deepStrictEqual(arrayify({ one: 1 }), [ { one: 1 } ]);
   const map = new Map();
   map.set('one', 1);
   map.set('two', 2);
