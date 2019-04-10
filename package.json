@@ -33,9 +33,11 @@
   "dependencies": {},
   "devDependencies": {
     "coveralls": "^3.0.3",
+    "esm-runner": "^0.1.2",
     "jsdoc-to-markdown": "^4.0.1",
     "rollup": "^1.9.0",
-    "test-runner": "^0.5.1"
+    "test-object-model": "^0.3.8",
+    "test-runner": "^0.6.0-14"
   },
   "standard": {
     "ignore": [

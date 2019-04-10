@@ -1,16 +1,16 @@
-import TestRunner from 'test-runner'
+import Tom from './node_modules/test-object-model/dist/index.mjs'
 import arrayify from './index.mjs'
 import a from 'assert'
 
-const runner = new TestRunner()
+const tom = new Tom('test')
 
-runner.test('if already array, do nothing', function () {
+tom.test('if already array, do nothing', function () {
   const arr = [ 1, 2, 3 ]
   const result = arrayify(arr)
   a.strictEqual(arr, result)
 })
 
-runner.test('arrayify()', function () {
+tom.test('arrayify()', function () {
   a.deepStrictEqual(arrayify(undefined), [])
   a.deepStrictEqual(arrayify(null), [ null ])
   a.deepStrictEqual(arrayify(0), [ 0 ])
@@ -28,3 +28,5 @@ runner.test('arrayify()', function () {
   map.set('two', 2)
   a.deepStrictEqual(arrayify(map), [ map ])
 })
+
+export default tom
