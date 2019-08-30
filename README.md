@@ -2,7 +2,7 @@
 [![npm module downloads](https://img.shields.io/npm/dt/array-back.svg)](https://www.npmjs.org/package/array-back)
 [![Build Status](https://travis-ci.org/75lb/array-back.svg?branch=master)](https://travis-ci.org/75lb/array-back)
 [![Coverage Status](https://coveralls.io/repos/github/75lb/array-back/badge.svg?branch=master)](https://coveralls.io/github/75lb/array-back?branch=master)
-[![Dependency Status](https://david-dm.org/75lb/array-back.svg)](https://david-dm.org/75lb/array-back)
+[![Dependency Status](https://badgen.net/david/dep/75lb/array-back)](https://david-dm.org/75lb/array-back)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 <a name="module_array-back"></a>

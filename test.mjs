@@ -1,8 +1,8 @@
-import Tom from './node_modules/test-object-model/dist/index.mjs'
+import TestRunner from 'test-runner'
 import arrayify from './index.mjs'
 import a from 'assert'
 
-const tom = new Tom('test')
+const tom = new TestRunner.Tom('array-back')
 
 tom.test('if already array, do nothing', function () {
   const arr = [ 1, 2, 3 ]

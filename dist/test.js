@@ -66,15 +66,15 @@ function arrayify (input) {
   return [ input ]
 }
 
-const runner = new TestRunner();
+const tom = new TestRunner.Tom('array-back');
 
-runner.test('if already array, do nothing', function () {
+tom.test('if already array, do nothing', function () {
   const arr = [ 1, 2, 3 ];
   const result = arrayify(arr);
   a.strictEqual(arr, result);
 });
 
-runner.test('arrayify()', function () {
+tom.test('arrayify()', function () {
   a.deepStrictEqual(arrayify(undefined), []);
   a.deepStrictEqual(arrayify(null), [ null ]);
   a.deepStrictEqual(arrayify(0), [ 0 ]);
@@ -92,3 +92,5 @@ runner.test('arrayify()', function () {
   map.set('two', 2);
   a.deepStrictEqual(arrayify(map), [ map ]);
 });
+
+module.exports = tom;
