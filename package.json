@@ -6,6 +6,7 @@
   "repository": "https://github.com/75lb/array-back.git",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "index.mjs",
   "keywords": [
     "to",
     "convert",
@@ -21,28 +22,20 @@
     "dist/index.js"
   ],
   "scripts": {
-    "test": "npm run test:esm && npm run test:js",
-    "test:esm": "esm-runner test.mjs",
-    "test:js": "npm run dist:test && test-runner dist/test.js",
-    "docs": "jsdoc2md -t README.hbs index.mjs -c build/jsdoc.conf > README.md; echo",
-    "cover": "nyc test-runner test.js && nyc report --reporter=text-lcov | coveralls",
-    "dist": "rollup -c build/index.config.js",
-    "dist:test": "rollup -c build/test.config.js",
-    "lint": "standard **/*.mjs"
+    "test": "npm run dist && esm-runner test.mjs",
+    "docs": "jsdoc2md -t README.hbs index.mjs -c jsdoc.conf > README.md",
+    "dist": "rollup -f umd -n arrayBack -o dist/index.js index.mjs"
   },
   "dependencies": {},
   "devDependencies": {
-    "coveralls": "^3.0.6",
-    "esm-runner": "^0.1.4",
-    "jsdoc-to-markdown": "^5.0.0",
-    "rollup": "^1.20.3",
-    "test-object-model": "^0.4.4",
-    "test-runner": "^0.6.0"
+    "coveralls": "^3.0.7",
+    "esm-runner": "^0.2.0",
+    "jsdoc-to-markdown": "^5.0.2",
+    "rollup": "^1.26.3"
   },
   "standard": {
     "ignore": [
-      "dist",
-      "build"
+      "dist"
     ]
   }
 }
