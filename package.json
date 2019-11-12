@@ -30,6 +30,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@test-runner/web": "^0.2.1",
     "coveralls": "^3.0.7",
     "esm-runner": "^0.2.0",
     "isomorphic-assert": "^0.1.1",
