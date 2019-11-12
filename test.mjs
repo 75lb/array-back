@@ -1,32 +1,37 @@
-import TestRunner from 'test-runner'
+import Tom from './node_modules/test-object-model/dist/index.mjs'
 import arrayify from './index.mjs'
-import a from 'assert'
+import getAssert from './node_modules/isomorphic-assert/index.mjs'
 
-const tom = new TestRunner.Tom('array-back')
+async function getTom () {
+  const a = await getAssert()
+  const tom = new Tom('array-back')
 
-tom.test('if already array, do nothing', function () {
-  const arr = [1, 2, 3]
-  const result = arrayify(arr)
-  a.strictEqual(arr, result)
-})
+  tom.test('if already array, do nothing', function () {
+    const arr = [1, 2, 3]
+    const result = arrayify(arr)
+    a.equal(arr, result)
+  })
 
-tom.test('arrayify()', function () {
-  a.deepStrictEqual(arrayify(undefined), [])
-  a.deepStrictEqual(arrayify(null), [null])
-  a.deepStrictEqual(arrayify(0), [0])
-  a.deepStrictEqual(arrayify([1, 2]), [1, 2])
-  a.deepStrictEqual(arrayify(new Set([1, 2])), [1, 2])
+  tom.test('arrayify()', function () {
+    a.deepEqual(arrayify(undefined), [])
+    a.deepEqual(arrayify(null), [null])
+    a.deepEqual(arrayify(0), [0])
+    a.deepEqual(arrayify([1, 2]), [1, 2])
+    a.deepEqual(arrayify(new Set([1, 2])), [1, 2])
 
-  function func () {
-    a.deepStrictEqual(arrayify(arguments), [1, 2, 3])
-  }
-  func(1, 2, 3)
+    function func () {
+      a.deepEqual(arrayify(arguments), [1, 2, 3])
+    }
+    func(1, 2, 3)
 
-  a.deepStrictEqual(arrayify({ one: 1 }), [{ one: 1 }])
-  const map = new Map()
-  map.set('one', 1)
-  map.set('two', 2)
-  a.deepStrictEqual(arrayify(map), [map])
-})
+    a.deepEqual(arrayify({ one: 1 }), [{ one: 1 }])
+    const map = new Map()
+    map.set('one', 1)
+    map.set('two', 2)
+    a.deepEqual(arrayify(map), [map])
+  })
 
-export default tom
+  return tom
+}
+
+export default getTom()

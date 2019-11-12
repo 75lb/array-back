@@ -22,7 +22,9 @@
     "dist/index.js"
   ],
   "scripts": {
-    "test": "npm run dist && esm-runner test.mjs",
+    "test": "npm run dist && npm run test:esm && npm run test:web",
+    "test:esm": "esm-runner test.mjs",
+    "test:web": "web-runner test.mjs",
     "docs": "jsdoc2md -t README.hbs index.mjs -c jsdoc.conf > README.md",
     "dist": "rollup -f umd -n arrayBack -o dist/index.js index.mjs"
   },
@@ -30,8 +32,9 @@
   "devDependencies": {
     "coveralls": "^3.0.7",
     "esm-runner": "^0.2.0",
+    "isomorphic-assert": "^0.1.1",
     "jsdoc-to-markdown": "^5.0.2",
-    "rollup": "^1.26.3"
+    "rollup": "^1.26.5"
   },
   "standard": {
     "ignore": [
