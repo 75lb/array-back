@@ -26,11 +26,13 @@
     "test:esm": "esm-runner test.mjs",
     "test:web": "web-runner test.mjs",
     "docs": "jsdoc2md -t README.hbs index.mjs -c jsdoc.conf > README.md",
-    "dist": "rollup -f umd -n arrayBack -o dist/index.js index.mjs"
+    "dist": "rollup -f umd -n arrayBack -o dist/index.js index.mjs",
+    "cover": "c8 npm run test:esm && c8 report --reporter=text-lcov | coveralls"
   },
   "dependencies": {},
   "devDependencies": {
     "@test-runner/web": "^0.2.1",
+    "c8": "^6.0.1",
     "coveralls": "^3.0.7",
     "esm-runner": "^0.2.0",
     "isomorphic-assert": "^0.1.1",
