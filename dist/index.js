@@ -52,17 +52,13 @@
   function arrayify (input) {
     if (Array.isArray(input)) {
       return input
-    }
-
-    if (input === undefined) {
+    } else if (input === undefined) {
       return []
-    }
-
-    if (isArrayLike(input) || input instanceof Set) {
+    } else if (isArrayLike(input) || input instanceof Set) {
       return Array.from(input)
+    } else {
+      return [input]
     }
-
-    return [input]
   }
 
   return arrayify;

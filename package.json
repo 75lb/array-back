@@ -15,7 +15,7 @@
     "arrayify"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "files": [
     "index.mjs",

@@ -1,6 +1,6 @@
-import Tom from './node_modules/test-object-model/dist/index.mjs'
+import Tom from 'test-object-model/index.mjs'
 import arrayify from './index.mjs'
-import getAssert from './node_modules/isomorphic-assert/index.mjs'
+import getAssert from 'isomorphic-assert/index.mjs'
 
 async function getTom () {
   const a = await getAssert()
