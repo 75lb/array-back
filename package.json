@@ -31,13 +31,13 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@test-runner/web": "^0.2.1",
+    "@test-runner/web": "^0.3.4",
     "c8": "^6.0.1",
-    "coveralls": "^3.0.7",
-    "esm-runner": "^0.2.0",
+    "coveralls": "^3.0.9",
+    "esm-runner": "^0.3.4",
     "isomorphic-assert": "^0.1.1",
-    "jsdoc-to-markdown": "^5.0.2",
-    "rollup": "^1.26.5"
+    "jsdoc-to-markdown": "^5.0.3",
+    "rollup": "^1.27.13"
   },
   "standard": {
     "ignore": [
