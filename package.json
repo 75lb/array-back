@@ -5,7 +5,7 @@
   "description": "Guarantees an array back",
   "repository": "https://github.com/75lb/array-back.git",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "index.mjs",
   "module": "index.mjs",
   "keywords": [
     "to",
@@ -15,33 +15,24 @@
     "arrayify"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "files": [
-    "index.mjs",
-    "dist/index.js"
+    "index.mjs"
   ],
   "scripts": {
-    "test": "npm run dist && npm run test:esm && npm run test:web",
-    "test:esm": "esm-runner test.mjs",
+    "test": "npm run test:esm && npm run test:web",
+    "test:esm": "test-runner test.mjs",
     "test:web": "web-runner test.mjs",
     "docs": "jsdoc2md -t README.hbs index.mjs -c jsdoc.conf > README.md",
-    "dist": "rollup -f umd -n arrayBack -o dist/index.js index.mjs",
     "cover": "c8 npm run test:esm && c8 report --reporter=text-lcov | coveralls"
   },
-  "dependencies": {},
   "devDependencies": {
     "@test-runner/web": "^0.3.5",
-    "c8": "^7.3.0",
+    "c8": "^7.7.1",
     "coveralls": "^3.1.0",
-    "esm-runner": "^0.3.4",
-    "isomorphic-assert": "^0.1.1",
-    "jsdoc-to-markdown": "^6.0.1",
-    "rollup": "^2.26.8"
-  },
-  "standard": {
-    "ignore": [
-      "dist"
-    ]
+    "isomorphic-assert": "^0.2.0",
+    "jsdoc-to-markdown": "^7.0.1",
+    "test-runner": "^0.8.14"
   }
 }

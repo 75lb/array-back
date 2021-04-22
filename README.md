@@ -16,7 +16,7 @@ Takes any input and guarantees an array back.
 - Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
 - Ignores input which is already an array.
 
-**Example**  
+**Example**
 ```js
 > const arrayify = require('array-back')
 
@@ -42,7 +42,7 @@ Takes any input and guarantees an array back.
 <a name="exp_module_array-back--arrayify"></a>
 
 ### arrayify(input) ⇒ <code>Array</code> ⏏
-**Kind**: Exported function  
+**Kind**: Exported function
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -71,12 +71,6 @@ Within an modern browser ECMAScript Module:
 import arrayify from './node_modules/array-back/index.mjs'
 ```
 
-Old browser (adds `window.arrayBack`):
-
-```html
-<script nomodule src="./node_modules/array-back/dist/index.js"></script>
-```
-
 * * *
 
-&copy; 2015-20 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
+&copy; 2015-21 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
