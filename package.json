@@ -6,7 +6,6 @@
   "repository": "https://github.com/75lb/array-back.git",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "index.mjs",
   "keywords": [
     "to",
     "convert",
