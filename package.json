@@ -5,8 +5,8 @@
   "description": "Guarantees an array back",
   "repository": "https://github.com/75lb/array-back.git",
   "license": "MIT",
-  "main": "index.mjs",
-  "module": "index.mjs",
+  "main": "./index.mjs",
+  "exports": "./index.mjs",
   "keywords": [
     "to",
     "convert",
