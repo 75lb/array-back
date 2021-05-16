@@ -16,7 +16,7 @@ Takes any input and guarantees an array back.
 - Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
 - Ignores input which is already an array.
 
-**Example**
+**Example**  
 ```js
 > const arrayify = require('array-back')
 
@@ -42,7 +42,7 @@ Takes any input and guarantees an array back.
 <a name="exp_module_array-back--arrayify"></a>
 
 ### arrayify(input) ⇒ <code>Array</code> ⏏
-**Kind**: Exported function
+**Kind**: Exported function  
 
 | Param | Type | Description |
 | --- | --- | --- |

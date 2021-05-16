@@ -21,18 +21,18 @@
     "index.mjs"
   ],
   "scripts": {
-    "test": "npm run test:esm && npm run test:web",
-    "test:esm": "test-runner test.mjs",
+    "test": "npm run test:node && npm run test:web",
+    "test:node": "test-runner test.mjs",
     "test:web": "web-runner test.mjs",
     "docs": "jsdoc2md -t README.hbs index.mjs -c jsdoc.conf > README.md",
-    "cover": "c8 npm run test:esm && c8 report --reporter=text-lcov | coveralls"
+    "cover": "c8 npm run test:node && c8 report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
     "@test-runner/web": "^0.3.5",
-    "c8": "^7.7.1",
+    "c8": "^7.7.2",
     "coveralls": "^3.1.0",
     "isomorphic-assert": "^0.2.0",
     "jsdoc-to-markdown": "^7.0.1",
-    "test-runner": "^0.8.14"
+    "test-runner": "^0.9.2"
   }
 }
