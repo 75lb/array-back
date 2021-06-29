@@ -20,7 +20,8 @@
     "node": ">=14"
   },
   "files": [
-    "index.mjs"
+    "index.mjs",
+    "dist"
   ],
   "scripts": {
     "test": "npm run test:node",
