@@ -1,4 +1,4 @@
-import Tom from 'test-object-model/index.mjs'
+import Tom from 'test-object-model'
 import arrayify from './index.mjs'
 import getAssert from 'isomorphic-assert/index.mjs'
 

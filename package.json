@@ -5,8 +5,10 @@
   "description": "Guarantees an array back",
   "repository": "https://github.com/75lb/array-back.git",
   "license": "MIT",
-  "main": "./index.mjs",
-  "exports": "./index.mjs",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "keywords": [
     "to",
     "convert",
@@ -21,16 +23,16 @@
     "index.mjs"
   ],
   "scripts": {
-    "test": "npm run test:node && npm run test:web",
+    "test": "npm run test:node",
     "test:node": "test-runner test.mjs",
     "test:web": "web-runner test.mjs",
     "docs": "jsdoc2md -t README.hbs index.mjs -c jsdoc.conf > README.md",
-    "cover": "c8 npm run test:node && c8 report --reporter=text-lcov | coveralls"
+    "cover": "c8 npm run test:node && c8 report --reporter=text-lcov | coveralls",
+    "dist": "rollup -c"
   },
   "devDependencies": {
-    "@test-runner/web": "^0.3.5",
-    "c8": "^7.7.2",
-    "coveralls": "^3.1.0",
+    "c8": "^7.7.3",
+    "coveralls": "^3.1.1",
     "isomorphic-assert": "^0.2.0",
     "jsdoc-to-markdown": "^7.0.1",
     "test-runner": "^0.9.2"
