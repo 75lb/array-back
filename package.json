@@ -17,7 +17,7 @@
     "arrayify"
   ],
   "engines": {
-    "node": ">=14"
+    "node": ">=12"
   },
   "files": [
     "index.mjs",
@@ -32,11 +32,10 @@
     "dist": "rollup -c"
   },
   "devDependencies": {
-    "c8": "^7.7.3",
-    "coveralls": "^3.1.1",
-    "isomorphic-assert": "^0.2.0",
+    "isomorphic-assert": "^1.0.0",
     "jsdoc-to-markdown": "^7.0.1",
-    "rollup": "^2.52.7",
-    "test-runner": "^0.9.5"
+    "rollup": "^2.53.3",
+    "test-object-model": "^0.7.1",
+    "test-runner": "^0.8.14"
   }
 }
