@@ -1,6 +1,6 @@
 export default [
   {
-    input: 'index.mjs',
+    input: 'index.js',
     output: {
       file: 'dist/index.cjs',
       format: 'cjs',
