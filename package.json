@@ -1,7 +1,7 @@
 {
   "name": "array-back",
   "author": "Lloyd Brookes <opensource@75lb.com>",
-  "version": "6.2.2",
+  "version": "6.2.3",
   "description": "Guarantees an array back",
   "repository": {
     "type": "git",
