@@ -4,13 +4,6 @@ NOTICE: This index.mjs file only exists for backwards-compatibility purposes.
 The main source file is `index.js`, however some browser applications may still reference `./node_modules/array-back/index.mjs` so this file will remain, for now. It will be removed in the first future release to contain a breaking change.
 */
 
-
-
-
-
-
-
-
 /**
  * Takes any input and guarantees an array back.
  *

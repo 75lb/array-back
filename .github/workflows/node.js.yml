@@ -4,25 +4,34 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, next ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        node-version: [12, 14, 16, 17]
+        os: [ubuntu-latest]
+        node-version: [12, 14, 16, 18, 20, 22, 24, 25]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm test
+    - run: npm install
+    - run: npm i -g @75lb/nature
+    - run: npm run test:ci
+      # env:
+      #   FORCE_COLOR: 3
