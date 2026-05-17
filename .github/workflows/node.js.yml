@@ -22,16 +22,16 @@ jobs:
         node-version: [12, 14, 16, 18, 20, 22, 24, 25]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
       with:
         persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
     - run: npm i -g @75lb/nature
-    - run: npm run test:ci
+    - run: npm run test
       # env:
       #   FORCE_COLOR: 3

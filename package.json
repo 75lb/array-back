@@ -8,10 +8,7 @@
     "url": "git+https://github.com/75lb/array-back.git"
   },
   "license": "MIT",
-  "exports": {
-    "import": "./index.js",
-    "require": "./dist/index.cjs"
-  },
+  "exports": "./index.js",
   "type": "module",
   "keywords": [
     "to",
@@ -24,15 +21,11 @@
     "node": ">=12.17"
   },
   "files": [
-    "index.js",
-    "index.mjs",
-    "dist"
+    "index.js"
   ],
   "scripts": {
-    "test": "npm run dist && npm run test:ci",
-    "test:ci": "75lb-nature test-runner test.js",
-    "docs": "75lb-nature jsdoc2md -t README.hbs index.js > README.md",
-    "dist": "75lb-nature cjs-build index.js"
+    "test": "75lb-nature test-runner test.js",
+    "docs": "75lb-nature jsdoc2md -t README.hbs index.js > README.md"
   },
   "devDependencies": {}
 }
