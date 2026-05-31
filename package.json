@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "test": "75lb-nature test-runner test.js",
-    "docs": "75lb-nature jsdoc2md -t README.hbs index.js > README.md"
+    "docs": "dcdoc --inputs index.js > README.md"
   },
   "devDependencies": {}
 }
