@@ -16,7 +16,6 @@ Takes any input and guarantees an array back.
 #### Example
 
 ```js
-> const arrayBack = require('array-back')
 > arrayBack(undefined)
 []
 
