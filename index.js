@@ -1,11 +1,6 @@
 /*☭
 ## array-back
 
-- **Type:** Package
-- **Supported runtimes:** Node.Js >= v12
-- **Module type:** JavaScript
-- **Exports:** Synchronous Function
-
 Takes any input and guarantees an array back.
 
 - Converts array-like objects (e.g. `arguments`, `Set`) to a real array.
@@ -51,7 +46,9 @@ function isArrayLike (input) {
 
 Takes any input and guarantees an array back.
 
-- **Type:** `function`
+- **Type:** Exported Synchronous Function
+- **Supported runtimes:** Node.Js >= v12
+- **Module type:** JavaScript
 - **Returns:** `Array`
 
 ¬

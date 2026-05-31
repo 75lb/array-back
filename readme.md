@@ -1,15 +1,10 @@
 [![view on npm](https://badgen.net/npm/v/array-back)](https://www.npmjs.org/package/array-back)
 [![npm module downloads](https://badgen.net/npm/dt/array-back)](https://www.npmjs.org/package/array-back)
 [![Gihub repo dependents](https://badgen.net/github/dependents-repo/75lb/array-back)](https://github.com/75lb/array-back/network/dependents?dependent_type=REPOSITORY)
-[![Gihub package dependents](https://badgen.net/github/dependents-pkg/75lb/array-back)](https://github.com/75lb/array-back/network/dependents?dependent_type=PACKAGE)
+[![Gihub package dependents](https://badgen.net/github/dependents-pkg/75lb/array-back)](https://github.com/75lb/darray-back/network/dependents?dependent_type=PACKAGE)
 [![Node.js CI](https://github.com/75lb/array-back/actions/workflows/node.js.yml/badge.svg)](https://github.com/75lb/array-back/actions/workflows/node.js.yml)
 
 ## array-back
-
-- **Type:** Package
-- **Supported runtimes:** Node.Js >= v12
-- **Module type:** JavaScript
-- **Exports:** Synchronous Function
 
 Takes any input and guarantees an array back.
 
@@ -46,7 +41,9 @@ Takes any input and guarantees an array back.
 
 Takes any input and guarantees an array back.
 
-- **Type:** `function`
+- **Type:** Exported Synchronous Function
+- **Supported runtimes:** Node.Js >= v12
+- **Module type:** JavaScript
 - **Returns:** `Array`
 
 | Param | Type | Description |
@@ -58,22 +55,22 @@ Takes any input and guarantees an array back.
 
 This library is compatible with Node.js, the Web and any style of module loader. It can be loaded anywhere, natively without transpilation.
 
-Node.js:
+From a Node CommonJS module:
 
 ```js
-const arrayify = require('array-back')
+const arrayBack = (await import('array-back')).default
 ```
 
-Within Node.js with ECMAScript Module support enabled:
+From a Node.js JavaScript Module:
 
 ```js
-import arrayify from 'array-back'
+import arrayBack from 'array-back'
 ```
 
-Within an modern browser ECMAScript Module:
+Within an modern browser JavaScript Module:
 
 ```js
-import arrayify from './node_modules/array-back/index.js'
+import arrayBack from './node_modules/array-back/index.js'
 ```
 
 * * *
