@@ -8,8 +8,6 @@ Takes any input and guarantees an array back.
 - Converts `undefined` to an empty array.
 - Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
 - Ignores input which is already an array.
-- Supported runtimes: Node.Js >= v12
-- Module type: JavaScript
 
 **Example**
 
@@ -33,6 +31,10 @@ Takes any input and guarantees an array back.
 > f(1,2,3)
 [ 1, 2, 3 ]
 ```
+
+- **Supported runtimes**: Node.Js >= v12
+- **Module type**: Isomorphic JavaScript
+
 */
 
 function isObject (input) {
