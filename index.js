@@ -1,8 +1,6 @@
 /*☭
-## array-back
+# array-back
 
-- **Supported runtimes:** Node.Js >= v12
-- **Module type:** JavaScript
 
 Takes any input and guarantees an array back.
 
@@ -10,6 +8,8 @@ Takes any input and guarantees an array back.
 - Converts `undefined` to an empty array.
 - Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
 - Ignores input which is already an array.
+- Supported runtimes: Node.Js >= v12
+- Module type: JavaScript
 
 **Example**
 
@@ -44,7 +44,7 @@ function isArrayLike (input) {
 }
 
 /*☭
-### arrayBack
+## arrayBack
 
 Takes any input and guarantees an array back.
 

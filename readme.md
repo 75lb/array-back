@@ -6,10 +6,6 @@
 
 # array-back
 
-## array-back
-
-- **Supported runtimes:** Node.Js >= v12
-- **Module type:** JavaScript
 
 Takes any input and guarantees an array back.
 
@@ -17,6 +13,8 @@ Takes any input and guarantees an array back.
 - Converts `undefined` to an empty array.
 - Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
 - Ignores input which is already an array.
+- Supported runtimes: Node.Js >= v12
+- Module type: JavaScript
 
 **Example**
 
@@ -41,7 +39,7 @@ Takes any input and guarantees an array back.
 [ 1, 2, 3 ]
 ```
 
-### arrayBack
+## arrayBack
 
 Takes any input and guarantees an array back.
 
@@ -56,16 +54,16 @@ Takes any input and guarantees an array back.
 
 This library is compatible with Node.js, the Web and any style of module loader. It can be loaded anywhere, natively without transpilation.
 
-From a Node CommonJS module:
-
-```js
-const arrayBack = (await import('array-back')).default
-```
-
 From a Node.js JavaScript Module:
 
 ```js
 import arrayBack from 'array-back'
+```
+
+From a Node CommonJS module:
+
+```js
+const arrayBack = (await import('array-back')).default
 ```
 
 Within an modern browser JavaScript Module:
