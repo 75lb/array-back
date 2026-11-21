@@ -1,6 +1,9 @@
 /*☭
 ## array-back
 
+- **Supported runtimes:** Node.Js >= v12
+- **Module type:** JavaScript
+
 Takes any input and guarantees an array back.
 
 - Converts array-like objects (e.g. `arguments`, `Set`) to a real array.
@@ -8,7 +11,7 @@ Takes any input and guarantees an array back.
 - Converts any another other, singular value (including `null`, objects and iterables other than `Set`) into an array containing that value.
 - Ignores input which is already an array.
 
-#### Example
+**Example**
 
 ```js
 > arrayBack(undefined)
@@ -46,8 +49,6 @@ function isArrayLike (input) {
 Takes any input and guarantees an array back.
 
 - **Type:** Exported Synchronous Function
-- **Supported runtimes:** Node.Js >= v12
-- **Module type:** JavaScript
 - **Returns:** `Array`
 
 ¬
@@ -59,9 +60,6 @@ Takes any input and guarantees an array back.
   `any`
   The input value to convert to an array
 ¬
-
-࿕
-id: Something
 */
 function arrayBack (input) {
   if (Array.isArray(input)) {

@@ -25,7 +25,12 @@
   ],
   "scripts": {
     "test": "75lb-nature test-runner test.js",
-    "docs": "dcdoc --inputs index.js > README.md"
+    "docs": "dcdoc2md --inputs index.js --steps io-read dcdoc-parse quick-table combine-content insert-into-template body-to-stdout --template readme.template > readme.md"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "@dcdoc/model": "file:../../dcdoc-zone/dcdoc/model",
+    "75lb-templates": "file:../../dcdoc-zone/75lb-templates",
+    "dcdoc-parse": "file:../../dcdoc-zone/dcdoc/parse",
+    "dcdoc-template": "file:../../dcdoc-zone/dcdoc/template"
+  }
 }

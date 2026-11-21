@@ -1,0 +1,31 @@
+${this.t.render('ReadmeHeader', { packageName: 'array-back', repo: '75lb/array-back' })}
+
+# array-back
+
+${data}
+
+### Load anywhere
+
+This library is compatible with Node.js, the Web and any style of module loader. It can be loaded anywhere, natively without transpilation.
+
+From a Node CommonJS module:
+
+\`\`\`js
+const arrayBack = (await import('array-back')).default
+\`\`\`
+
+From a Node.js JavaScript Module:
+
+\`\`\`js
+import arrayBack from 'array-back'
+\`\`\`
+
+Within an modern browser JavaScript Module:
+
+\`\`\`js
+import arrayBack from './node_modules/array-back/index.js'
+\`\`\`
+
+* * *
+
+&copy; 2015-26 [Lloyd Brookes](https://github.com/75lb) \<opensource@75lb.com\>.
