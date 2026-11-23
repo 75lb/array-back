@@ -1,4 +1,4 @@
-${this.t.render('ReadmeHeader', { packageName: 'array-back', repo: '75lb/array-back' })}
+${this.t.render('ReadMeHeader', { packageName: 'array-back', repo: '75lb/array-back' })}
 
 ${data}
 
